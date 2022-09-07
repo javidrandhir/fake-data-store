@@ -19,7 +19,7 @@ const fetchProducts=async(req,res)=>{
     try{
         if(limit || sort){
             const products=await Product.find({}).limit(limit).sort({id:sort})
-             res.status(200).json(products)
+            return res.status(200).json(products)
         }
         else{
             const products=await Product.find({})
@@ -45,7 +45,7 @@ const createProduct=async(req,res)=>{
         rating:5,
         stock:15
     })
-    res.status(200).json(newProduct,{message:'product created successfully'})
+   return res.status(200).json(newProduct,{message:'product created successfully'})
 }
 
 

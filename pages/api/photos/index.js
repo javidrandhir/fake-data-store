@@ -19,7 +19,7 @@ const createPhoto=async(req,res)=>{
         title:"jacket",
         url:'https://res.cloudinary.com/randhircloud/image/upload/v1662381593/photo-1548126032-079a0fb0099d_bkqrdw.jpg'
     }).save()
-    res.status(200).json(created)
+   return  res.status(200).json(created)
    }catch(err){
     return res.status(400).json({message:'error while creating !'})
    }

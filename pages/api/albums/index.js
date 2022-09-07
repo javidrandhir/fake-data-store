@@ -18,7 +18,7 @@ const createAlbum=async(req,res)=>{
         title:"technology",
         url:'https://res.cloudinary.com/randhircloud/image/upload/v1662379677/photo-1544441893-675973e31985_xwdfhh.jpg'
     }).save()
-    res.status(200).json(created)
+    return res.status(200).json(created)
    }catch(err){
     return res.status(400).json({message:'error while creating !'})
    }

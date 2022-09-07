@@ -18,10 +18,10 @@ const fetchCarts=async(req,res)=>{
     const sort=req.query.sort
     if(limit || sort){
         const fetched=await Cart.find({}).limit(limit).sort({id:sort}).populate({path :'products.product'})
-         res.status(200).json(fetched)
+        return res.status(200).json(fetched)
     }else{
         const fetchde=await Cart.find({}).populate({path :'products.product'})
-        res.status(200).json(fetchde)
+      return res.status(200).json(fetchde)
     }
 }
 

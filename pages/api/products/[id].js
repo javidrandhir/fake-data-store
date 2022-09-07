@@ -21,7 +21,11 @@ const productApi=async(req,res)=>{
 const fetchProduct=async(req,res)=>{
     const {id}=req.query
    const reqProduct=await Product.findOne({id})
-   res.status(200).json(reqProduct)
+   if(reqProduct){
+     return res.status(200).json(reqProduct)
+   }else{
+    return res.status(400).json({message:'product with this id not found!'})
+   }
 }
 
 const deleteProduct=async(req,res)=>{
@@ -50,7 +54,7 @@ const updateProduct=async(req,res)=>{
     stock,
     model
   }
-  res.status(200).json(reqProduct)
+ return res.status(200).json(reqProduct)
 }
 const patchProduct=async(req,res)=>{
   const {id}=req.query
@@ -69,7 +73,7 @@ const patchProduct=async(req,res)=>{
     stock:req.body.stock ? req.body.stock :reqProduct.stock,
     model:req.body.model ? req.body.model :reqProduct.model
   }
-  res.status(200).json(patched)
+ return  res.status(200).json(patched)
 }
 
 

@@ -17,10 +17,10 @@ const fetchcategories=async(req,res)=>{
     
     if(limit || sort){
         const categories=await Product.find({category}).limit(limit).sort({id:sort})
-        res.status(200).json(categories)
+      return  res.status(200).json(categories)
     }
     const categories=await Product.find({category})
-    res.status(200).json(categories)
+   return res.status(200).json(categories)
 }
 
 export default categoryApi

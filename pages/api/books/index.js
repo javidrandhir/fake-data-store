@@ -17,11 +17,11 @@ const fetchBooks=async(req,res)=>{
     const limit=req.query.limit
     const sort=req.query.sort
     if(limit || sort){
-        const fetched=await Book.find({}).limit(limit).sort({id:sort})
-         res.status(200).json(fetched)
+        const fetchedBooks=await Book.find({}).limit(limit).sort({id:sort})
+         return res.status(200).json(fetchedBooks)
     }else{
-        const fetchde=await Book.find({})
-        res.status(200).json(fetchde)
+        const fetchedBooks=await Book.find({})
+       return res.status(200).json(fetchedBooks)
     }
 }
 
@@ -52,7 +52,7 @@ const createBook=async(req,res)=>{
             type,
             reviews
         }).save()
-        res.status(200).json(booknew)
+       return res.status(200).json(booknew)
     }
    }catch(err){
     return res.status(400).json({message:'error in creating book, please try after sometime !'})

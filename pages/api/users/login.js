@@ -28,7 +28,7 @@ const loginUser=async(req,res)=>{
          }else{
             const token=  jwt.sign({userId:user._id},'sertcvybuh9jnoibuhvgfcdxtygfhcv',{expiresIn:'7d'})
             const {name,email,isAdmin,image}=user;
-            res.status(200).json({token,user:{name,email,isAdmin,image}})
+           return res.status(200).json({token,user:{name,email,isAdmin,image}})
 
          }
     }catch(err){

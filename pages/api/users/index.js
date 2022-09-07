@@ -48,7 +48,7 @@ const createUser=async(req,res)=>{
                 {product:'63119b86bed6c1a01d185e5e',quantity:2}
             ]
         }).save()
-        res.status(200).json(newUser)
+       return res.status(200).json(newUser)
 
     }
 }
