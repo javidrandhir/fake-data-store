@@ -8,12 +8,16 @@ const cartApi=async(req,res)=>{
       switch(req.method){
         case 'GET':
             await fetchCart(req,res)
+            break;
             case 'DELETE':
                 await deleteCart(req,res)
+                break;
                 case 'PUT' :
                     await updatecart(req,res)
+                    break;
                   case 'PATCH' :
                     await patchcart(req,res)
+                    break;
       }
 }
 

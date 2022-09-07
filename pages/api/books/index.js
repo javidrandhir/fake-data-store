@@ -8,8 +8,10 @@ const booksApi=async(req,res)=>{
     switch(req.method){
         case 'GET':
             await fetchBooks(req,res)
+            break;
         case 'POST':
             await createBook(req,res)
+            break;
       
     }
 }

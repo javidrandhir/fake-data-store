@@ -5,7 +5,8 @@ initDB()
 const typesApi=async(req,res)=>{
     switch(req.method){
       case 'GET':
-          await fetchTypes(req,res)
+          await fetchTypes(req,res);
+          break;
     }
 }
 

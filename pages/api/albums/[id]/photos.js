@@ -9,6 +9,7 @@ const alumPhotos=async(req,res)=>{
     switch(req.method){
         case 'GET' :
             await fetchPhots(req,res)
+            break;
     }
 }
 

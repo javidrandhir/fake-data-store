@@ -8,6 +8,7 @@ const cart1Api=async(req,res)=>{
     switch(req.method){
         case 'POST':
             await createCart(req,res)
+            break;
     }
 }
 const createCart=async(req,res)=>{

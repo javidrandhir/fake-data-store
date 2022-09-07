@@ -7,8 +7,10 @@ const ablumsApi=async(req,res)=>{
     switch(req.method){
         case 'GET':
             await fetchAlbums(req,res)
+            break;
         case 'POST':
             await createAlbum(req,res)
+            break;
     }
 }
 const createAlbum=async(req,res)=>{

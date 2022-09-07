@@ -7,8 +7,10 @@ const productsApi=async(req,res)=>{
       switch(req.method){
         case 'GET':
             await fetchProducts(req,res)
+            break;
             case 'POST':
              await createProduct(req,res)
+             break;
       }
 }
 

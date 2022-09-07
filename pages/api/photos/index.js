@@ -7,8 +7,10 @@ const photosApi=async(req,res)=>{
     switch(req.method){
         case 'GET':
             await fetchphotos(req,res)
+            break;
         case 'POST':
             await createPhoto(req,res)
+            break;
     }
 }
 const createPhoto=async(req,res)=>{

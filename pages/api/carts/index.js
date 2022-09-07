@@ -8,8 +8,10 @@ const cartsApi=async(req,res)=>{
     switch(req.method){
         case 'GET':
             await fetchCarts(req,res)
+            break;
         case 'POST':
             await createCart(req,res)
+            break;
       
     }
 }

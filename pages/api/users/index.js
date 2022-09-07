@@ -9,8 +9,10 @@ const usersApi=async(req,res)=>{
       switch(req.method){
         case 'GET':
             await fetchUsers(req,res)
+            break;
             case 'POST':
              await createUser(req,res)
+             break;
       }
 }
 
@@ -20,11 +22,15 @@ const fetchUsers=async(req,res)=>{
      const sort=req.query.sort
      if(limit || sort){
         const fetchedUsers=await User.find({}).limit(limit).sort({id:sort})
-        return res.status(201).json(fetchedUsers)
+         res.status(201).json(fetchedUsers);
+         return;
      }else{
-        const fetched=await User.find({})
-        return res.status(201).json(fetched)
-     }
+
+         const fetched=await User.find({})
+         res.status(201).json(fetched)
+         return;
+        }
+     
    
 }
 const createUser=async(req,res)=>{
@@ -49,7 +55,6 @@ const createUser=async(req,res)=>{
             ]
         }).save()
        return res.status(200).json(newUser)
-
     }
 }
 

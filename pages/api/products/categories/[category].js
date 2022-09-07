@@ -6,6 +6,7 @@ const categoryApi=async(req,res)=>{
     switch(req.method){
       case 'GET':
           await fetchcategories(req,res)
+          break;
     }
 }
 

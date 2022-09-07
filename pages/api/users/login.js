@@ -8,7 +8,7 @@ const loginApi=async(req,res)=>{
     switch(req.method){
         case 'POST':
             await loginUser(req,res);
-            break
+            break;
     }
 }
 

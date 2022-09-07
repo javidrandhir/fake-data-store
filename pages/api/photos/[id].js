@@ -7,12 +7,16 @@ const albumApi=async(req,res)=>{
     switch(req.method){
         case 'GET' :
             await fetchPhoto(req,res)
+            break;
         case 'DELETE' :
             await deletePhoto(req,res)
+            break;
             case 'PUT' :
                 await updatePhoto(req,res)
+                break;
                 case 'PATCH' :
                     await patchPhoto(req,res)
+                    break;
     }
 }
 

@@ -6,6 +6,7 @@ const typeApi=async(req,res)=>{
     switch(req.method){
       case 'GET':
           await fetchTypeBooks(req,res)
+          break;
     }
 }
 

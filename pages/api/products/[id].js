@@ -7,12 +7,16 @@ const productApi=async(req,res)=>{
       switch(req.method){
         case 'GET':
             await fetchProduct(req,res)
+            break;
         case 'DELETE' :
             await deleteProduct(req,res)
+            break;
             case 'PUT' :
               await updateProduct(req,res)
+              break;
             case 'PATCH' :
               await patchProduct(req,res)
+              break;
            
       }
 }
