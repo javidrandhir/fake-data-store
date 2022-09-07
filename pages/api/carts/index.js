@@ -19,10 +19,10 @@ const fetchCarts=async(req,res)=>{
     const limit=req.query.limit
     const sort=req.query.sort
     if(limit || sort){
-        const fetched=await Cart.find({}).limit(limit).sort({id:sort}).populate({path :'products.product'})
+        const fetched=await Cart.find({}).limit(limit).sort({id:sort}).populate({path :"products.product",model:'Product'})
         return res.status(200).json(fetched)
     }else{
-        const fetchde=await Cart.find({}).populate({path :'products.product'})
+        const fetchde=await Cart.find({}).populate({path :"products.product"})
       return res.status(200).json(fetchde)
     }
 }
