@@ -2,23 +2,24 @@
 import initDB from '../../../utils/initDB'
 initDB()
 import Cart from '../../../models/Cart'
+import Product from '../../../models/Product'
 
 const cartsApi=async(req,res)=>{
     switch(req.method){
         case 'GET':
             await fetchCarts(req,res)
             break;
-        case 'POST':
-            await createCart(req,res)
+            case 'POST':
+                await createCart(req,res)
             break;
-      
+            
+        }
     }
-}
-const fetchCarts=async(req,res)=>{
+    const fetchCarts=async(req,res)=>{
     const limit=req.query.limit
     const sort=req.query.sort
     if(limit || sort){
-        const fetched=await Cart.find({}).limit(limit).sort({id:sort}).populate({path :"products.product",model:'Product'})
+        const fetched=await Cart.find({}).limit(limit).sort({id:sort}).populate({path :"products.product"})
         return res.status(200).json(fetched)
     }else{
         const fetchde=await Cart.find({}).populate({path :"products.product"})
