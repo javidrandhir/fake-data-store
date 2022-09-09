@@ -46,6 +46,20 @@ const router=useRouter()
             <p>You have access to all types of <span>collections</span> below and you can go to docs to learn more.You can test all these apis in postman too.</p>
             <p>You can use it for demo purposes or personal projects,training..etc</p>
          </div>
+         <div className='home_5'>
+           <h2> select your need here</h2>
+           <div className='home_5_items'>
+             <div className='item' onClick={()=>router.push('/Docs#allproducts')}><h3>Products</h3></div>
+             <div className='item' onClick={()=>router.push('/Docs#allusers')}><h3>users</h3></div>
+             <div className='item' onClick={()=>router.push('/Docs#allcarts')}><h3>carts</h3></div>
+             <div className='item' ><h3></h3></div>
+             <div className='item' ><h3>Get all features for<br /> <span>free</span></h3></div>
+             <div className='item'  ><h3></h3></div>
+             <div className='item' onClick={()=>router.push('/Docs#allalbums')}><h3>albums</h3></div>
+             <div className='item' onClick={()=>router.push('/Docs#allbooks')}><h3>books</h3></div>
+             <div className='item' onClick={()=>router.push('/Docs#allphotos')}><h3>photos</h3></div>
+           </div>
+         </div>
          <div className="home_3">
           <h1>resources</h1>
           <p>These are the collections you can access</p>

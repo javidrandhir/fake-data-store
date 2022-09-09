@@ -16,9 +16,9 @@ const ablumsApi=async(req,res)=>{
 const createAlbum=async(req,res)=>{
    try{
     const created=await Album({
-        id:4,
-        title:"technology",
-        url:'https://res.cloudinary.com/randhircloud/image/upload/v1662379677/photo-1544441893-675973e31985_xwdfhh.jpg'
+        id:10,
+        title:"monuments",
+        url:'https://res.cloudinary.com/randhircloud/image/upload/v1662618428/photo-1560633169-f66c33acafa8_ddalpw.jpg'
     }).save()
     return res.status(200).json(created)
    }catch(err){

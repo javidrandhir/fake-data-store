@@ -1,8 +1,9 @@
-import Cart from '../../../models/Cart'
 import initDB from '../../../utils/initDB'
-
-
 initDB()
+import Cart from '../../../models/Cart'
+import Product from '../../../models/Product'
+
+
 
 const cartApi=async(req,res)=>{
       switch(req.method){

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { SiNintendogamecube } from "react-icons/si";
-import { Link } from 'react-scroll'
 import { baseUrl } from '../components/BaseUrl';
 import { GiBullseye } from "react-icons/gi";
+import { useEffect } from 'react';
 
 const Docs = () => {
     const [showProducts,setShowProducts]=useState(true)
@@ -11,6 +11,8 @@ const Docs = () => {
     const [showPhotos,setShowPhotos]=useState(false)
     const [showUsers,setShowUsers]=useState(false)
     const [showBooks,setShowBooks]=useState(false)
+
+  
     const displaySection=(cate)=>{
         setShowProducts(false)
         setShowCarts(false)
@@ -67,7 +69,7 @@ const Docs = () => {
              <a href="#deleteproduct">delete a product</a>
           </div>
           <div className="docs_right">
-            <h1><SiNintendogamecube className='icon' /> products</h1>
+            <h1><SiNintendogamecube className='icon' /> products api</h1>
               <div className='component' id='allproducts'>
                   <h2>get all products</h2>
                   <div className='reveal_code'>
@@ -435,7 +437,7 @@ const Docs = () => {
              <a href="#deletebook">delete a book</a>
           </div>
           <div className="docs_right">
-            <h1><SiNintendogamecube className='icon' /> books</h1>
+            <h1><SiNintendogamecube className='icon' />books Api</h1>
               <div className='component' id='allbooks'>
                   <h2>get all books</h2>
                   <div className='reveal_code'>
@@ -827,7 +829,7 @@ const Docs = () => {
              <a href="#deletecart">delete cart</a>
           </div>
           <div className="docs_right">
-            <h1><SiNintendogamecube className='icon' /> Carts</h1>
+            <h1><SiNintendogamecube className='icon' /> Carts api</h1>
               <div className='component' id='allcarts'>
                   <h2>get all carts</h2>
                   <div className='reveal_code'>
@@ -1166,7 +1168,7 @@ const Docs = () => {
              <a href="#albumpics">get photos from album</a>
           </div>
           <div className="docs_right">
-            <h1><SiNintendogamecube className='icon' /> albums</h1>
+            <h1><SiNintendogamecube className='icon' /> albums api</h1>
               <div className='component' id='allalbums'>
                   <h2>get all albums</h2>
                   <div className='reveal_code'>
@@ -1392,7 +1394,7 @@ const Docs = () => {
              <a href="#deletephoto">delete photo</a>
           </div>
           <div className="docs_right">
-            <h1><SiNintendogamecube className='icon' /> Photos</h1>
+            <h1><SiNintendogamecube className='icon' /> Photos api</h1>
               <div className='component' id='allphotos'>
                   <h2>get all photos</h2>
                   <div className='reveal_code'>
@@ -1609,7 +1611,7 @@ const Docs = () => {
              <a href="#fetchusercart">fetch user cart</a>
           </div>
           <div className="docs_right">
-            <h1><SiNintendogamecube className='icon' /> users</h1>
+            <h1><SiNintendogamecube className='icon' /> users api</h1>
             <div className='component' id='loginuser'>
                   <h2>login user</h2>
                   <div className='reveal_code'>

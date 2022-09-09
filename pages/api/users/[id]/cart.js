@@ -1,8 +1,9 @@
-import Cart from "../../../../models/Cart";
-import User from '../../../../models/User'
 import initDB from "../../../../utils/initDB";
-
 initDB()
+import User from '../../../../models/User'
+import Cart from "../../../../models/Cart";
+import Product from '../../../../models/Product'
+
 
 
 const alumPhotos=async(req,res)=>{

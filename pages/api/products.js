@@ -32,20 +32,26 @@ const fetchProducts=async(req,res)=>{
     }
 }
 const createProduct=async(req,res)=>{
+    // shirts
+    // mobiles
+    // watches
+    // dress
+    // jacket
+    // earphones
     const products=await Product.find({})
     const length1=products.length
     const newProduct=await Product({
-        id:length1 + 1,
-        name:'basket 2',
-        description:'this is a best basket',
-        image1:'https://www.bing.com/th?id=OIP.bFlrHMS6H29BYnOcuxP7xAHaHa&w=197&h=121&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2',
-        image2:'https://www.bing.com/th?id=OIP.8-JX-Nx0ZDcoIjgQ4AvrmQHaHa&w=197&h=121&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2',
-        image3:'https://www.bing.com/th?id=OIP.Jg4UYz5SEt6xwg96FjSBdQHaHa&w=197&h=121&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2',
-        image4:'https://www.bing.com/th?id=OIP.Jg4UYz5SEt6xwg96FjSBdQHaHa&w=197&h=121&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2',
-        price:150,
-        category:'basket',
+        id:10,
+        name:"Vibez by Lifelong VBSWM360 Urbane Smartwatch with 3D UI 1.32 inch HD Display|24x7 Heart Rate & Blood Oxygen Tracking|8 Sports Mode|Sleep Monitor|IP67 Waterproof",
+        description:'The Vibez by Lifelong smartwatches feature a slim and lightweight design. The watch is loaded with amazing features and is extremely easy to operate. You can receive all important notifications, from calls & texts to social media & sedentary alerts, all in one place. Vibez watches are super handy, stylish and sleek. No matter where you go, Vibez is right there with you!',
+        image1:'https://res.cloudinary.com/randhircloud/image/upload/v1662706591/71TAPhyZlEL._SX522__balc3n.jpg',
+        image2:'https://res.cloudinary.com/randhircloud/image/upload/v1662706651/71E-cHosYvL._SX522__i93tbu.jpg',
+        image3:'https://res.cloudinary.com/randhircloud/image/upload/v1662706720/71I6gQirttL._SX522__aplbya.jpg',
+        image4:'https://res.cloudinary.com/randhircloud/image/upload/v1662706862/71todhYiaUL._SX522__dgxg3e.jpg',
+        price:3499,
+        category:'watches',
         rating:5,
-        stock:15
+        stock:17
     })
    return res.status(200).json(newProduct,{message:'product created successfully'})
 }

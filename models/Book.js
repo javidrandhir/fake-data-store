@@ -8,7 +8,7 @@ const bookSchema=new mongoose.Schema({
     rating:{type:Number,required:true},
     price:{type:Number,required:true},
     image:{type:String,required:true},
-    image1:{type:String,required:true},
+    image1:{type:String},
     description:{type:String,required:true},
     edition:{type:String,required:true},
     publisher:{type:String,required:true},
