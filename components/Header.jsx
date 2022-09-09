@@ -36,7 +36,7 @@ const Header = () => {
            <Link href="/"  ><a  className={isActive('/')} onClick={()=>setShowNav(false)}>home</a></Link>
            <Link href="/Docs" ><a  className={isActive('/Docs')} onClick={()=>setShowNav(false)}>docs</a></Link>
            {/* <Link href="/"><a  className={isActive('/')}>github</a></Link> */}
-           {/* <Link href="/"><a  className={isActive('/')}>donate</a></Link> */}
+           <Link href="/Donate"><a  className={isActive('/Donate')}>donate</a></Link>
           </div>
     </div>
     <hr className='header-row' />
