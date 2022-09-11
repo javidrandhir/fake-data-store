@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link'
 import { useState } from 'react'
+
 import { useRouter } from 'next/router'
 
 
@@ -18,17 +19,19 @@ const router=useRouter()
       <Head>
         <title>Fake Data Store Api</title>
         <meta name="description" content="this is a free api data place for developers" />
-        <meta name="description" content="rest api,fake data for ecommerce sites" />
-        <meta name="description" content="products data,posts,reviews" />
+        <meta name="description" content="free fake rest api,rest api,fake data for ecommerce sites" />
+        <meta name="description" content="products api,users api,carts api,albums api, data api,posts api,reviews api" />
         <link rel="icon" href="/favicon.ico" />
+      
       </Head>
       <div className="home">
      
+    
          <div className="home_1">
              <div className="left">
-             <h1>fake data store</h1>
+             <h1>fake data store Api</h1>
              <h3>place for fake data for your ecommerce sites</h3>
-             <p>explore...</p>
+             <p>Fake free rest api...</p>
              <div className='buttons'>
                  <button onClick={()=>router.push('/Docs')}>docs</button>
                  <button>github</button>
@@ -47,7 +50,7 @@ const router=useRouter()
             <p>You can use it for demo purposes or personal projects,training..etc</p>
          </div>
          <div className='home_5'>
-           <h2> select your need here</h2>
+           <h2> select your <span>API&apos;s</span> here</h2>
            <div className='home_5_items'>
              <div className='item' onClick={()=>router.push('/Docs#allproducts')}><h3>Products</h3></div>
              <div className='item' onClick={()=>router.push('/Docs#allusers')}><h3>users</h3></div>
@@ -167,7 +170,7 @@ const router=useRouter()
             </div>
          </div>
     </div>
-      
+    
     </div>
   )
 }

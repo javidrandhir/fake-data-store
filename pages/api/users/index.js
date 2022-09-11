@@ -50,8 +50,8 @@ const createUser=async(req,res)=>{
             id:1,
             userId:1,
             products:[
-                {product:'63109b6175837e79bfc0cfb2',quantity:1},
-                {product:'63119b86bed6c1a01d185e5e',quantity:2}
+                {product:'631ad8a3209a6eaafdbaaa0f',quantity:1},
+                {product:'631ad9b4209a6eaafdbaaa12',quantity:2}
             ]
         }).save()
        return res.status(200).json(newUser)

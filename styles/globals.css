@@ -316,6 +316,10 @@ body{
   font-size: 2rem;
   text-transform: capitalize;
 }
+.home_5 > h2 span{
+  color: #f08d49;
+  font-size: 2.2rem;
+}
 .home_5_items{
   margin: 2rem 0 1rem;
   display: grid;
@@ -457,7 +461,7 @@ body{
   width: 100%;
   height: 40vh;
   /* min-height: 42vh; */
-  background: url('/wave\ \(1\).png');
+  background: url('https://res.cloudinary.com/randhircloud/image/upload/v1662879043/wave1_pkwmhx.png');
   background-position: center;
   background-size: cover;
   display: flex;
@@ -495,7 +499,7 @@ body{
 /* docs */
 .docs{
   position: relative;
-  width: 88%;
+  width: 97%;
   height: 150vh;
   overflow: hidden;
   margin: 1rem auto;
@@ -533,6 +537,26 @@ body{
   box-shadow: 0 0 4px #f646aa;
   color: #f646aa;
   font-weight: 600;
+}
+.docs_categories p:nth-of-type(2).active{
+  box-shadow: 0 0 4px rgb(9, 136, 187);
+color: rgb(9, 136, 187);
+}
+.docs_categories p:nth-of-type(3).active{
+  box-shadow: 0 0 4px crimson;
+color:crimson;
+}
+.docs_categories p:nth-of-type(4).active{
+  box-shadow: 0 0 4px #a922d2;
+color:#a922d2;
+}
+.docs_categories p:nth-of-type(5).active{
+  box-shadow: 0 0 4px #f08d49;
+color:#f08d49;
+}
+.docs_categories p:nth-of-type(6).active{
+  box-shadow: 0 0 4px #2d2d2d;
+color:#2d2d2d;
 }
 
 .docs_content{
@@ -582,11 +606,11 @@ body{
   box-shadow:inset 5px -100px 10px #fff;
 }
 .docs_right::-webkit-scrollbar{
-  width: 4px;
+  width: 3px;
 }
 .docs_right::-webkit-scrollbar-thumb{
   background-color: #f646aa;
-  /* width: 4px; */
+  border-radius: 20px;
 }
 .docs_right >h1{
   display: flex;
@@ -636,9 +660,16 @@ body{
   padding: 7px 25px;
   margin: 15px 0;
   outline: none;
-  border: none;
+  border: 1px solid #f646aa;
+  width: fit-content;
   cursor: pointer;
+  transition: all 1s ease;
   border-radius: 5px;
+}
+.docs_right .component > p.active{
+  background-color: crimson;
+  color: #fff;
+  border: none;
 }
 .docs_right .component .reveal_note{
   font-size: 1rem;
@@ -658,9 +689,17 @@ body{
 }
 .docs_right .component .reveal_output{
   background-color: #2d2d2d ;
-  padding: 1rem 2rem;
   color: #ccc;
+  height: 0;
+  overflow: hidden;
+  padding:0;
   border-radius: 5px;
+  transition: all 1s ease;
+}
+.docs_right .component .reveal_output.active{
+  height: fit-content;
+  transition: all 1s ease;
+  padding: 1rem;
 }
 
 

@@ -35,24 +35,29 @@ const createProduct=async(req,res)=>{
     // shirts
     // mobiles
     // watches
+    // computers
     // dress
+    // tshirts
     // jacket
     // earphones
-    const products=await Product.find({})
-    const length1=products.length
+    const {id}=req.body
+    const products=await Product.findOne({id})
+        if(products){
+             return res.status(400).json({message:'already a product exist with this id.'})
+        }
     const newProduct=await Product({
-        id:10,
-        name:"Vibez by Lifelong VBSWM360 Urbane Smartwatch with 3D UI 1.32 inch HD Display|24x7 Heart Rate & Blood Oxygen Tracking|8 Sports Mode|Sleep Monitor|IP67 Waterproof",
-        description:'The Vibez by Lifelong smartwatches feature a slim and lightweight design. The watch is loaded with amazing features and is extremely easy to operate. You can receive all important notifications, from calls & texts to social media & sedentary alerts, all in one place. Vibez watches are super handy, stylish and sleek. No matter where you go, Vibez is right there with you!',
-        image1:'https://res.cloudinary.com/randhircloud/image/upload/v1662706591/71TAPhyZlEL._SX522__balc3n.jpg',
-        image2:'https://res.cloudinary.com/randhircloud/image/upload/v1662706651/71E-cHosYvL._SX522__i93tbu.jpg',
-        image3:'https://res.cloudinary.com/randhircloud/image/upload/v1662706720/71I6gQirttL._SX522__aplbya.jpg',
-        image4:'https://res.cloudinary.com/randhircloud/image/upload/v1662706862/71todhYiaUL._SX522__dgxg3e.jpg',
-        price:3499,
-        category:'watches',
+        id:40,
+        name:"iQOO Z6 44W (Raven Black, 6GB RAM, 128GB Storage)",
+        description:"Z6 is equipped with a FHD+ AMOLED dispaly to give a truly immersive display experience with true color contrast. The display provides a 180Hz Touch Sampling Rate in the gaming sessions for an enhanced touch response.50MP AI rear camera comes with a variety of smart AI camera features and effects to capture wonderful moments with ease.",
+        image1:'https://res.cloudinary.com/randhircloud/image/upload/v1662804481/61ST4CMWEKL._SX569__ey0l04.jpg',
+        image2:'https://res.cloudinary.com/randhircloud/image/upload/v1662804520/51Tfpuj315L._SY741__tz8c3i.jpg',
+        image3:'https://res.cloudinary.com/randhircloud/image/upload/v1662804558/41t35bCleTL._SY741__qamfjh.jpg',
+        image4:'https://res.cloudinary.com/randhircloud/image/upload/v1662804623/415a8wx0ATL._SX679__orftfd.jpg',
+        price:19998,
+        category:'mobiles',
         rating:5,
-        stock:17
-    })
+        stock:15
+    }).save()
    return res.status(200).json(newProduct,{message:'product created successfully'})
 }
 
