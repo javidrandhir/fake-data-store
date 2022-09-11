@@ -649,6 +649,7 @@ color:#2d2d2d;
 .docs_right .component .reveal_code p{
   font-size: 1rem;
   letter-spacing: .5px;
+  word-break: break-all;
 }
 .docs_right .component .reveal_code p span{
   color: #7ec699;
@@ -905,6 +906,9 @@ color:#2d2d2d;
   }
   .home_5_items .item h3{
     font-size: .9rem;
+  }
+  .docs_right .component > p{
+    font-size: .8rem;
   }
   
 }
