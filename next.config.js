@@ -13,7 +13,7 @@ const withPWA = require('next-pwa')({
   skipWaiting:true,
   runtimeCaching,
   fallbacks:{
-    document:'/_offline'
+    document:'/_offline.js'
   }
 })
 module.exports = withPWA({
